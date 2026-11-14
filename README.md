@@ -30,24 +30,32 @@ The system uses custom Messages, Services, and Actions to manage package loading
 akash_warehouse_ws/
 │
 ├── src/
-│ ├── warehouse_interfaces/
-│ │ ├── msg/
-│ │ │ └── DeliveryStatus.msg
-│ │ ├── srv/
-│ │ │ └── LoadPackage.srv
-│ │ ├── action/
-│ │ │ └── Deliver.action
-│ │ ├── CMakeLists.txt
-│ │ └── package.xml
-│ │
-│ └── warehouse_nodes/
-│ ├── warehouse_nodes/
-│ │ ├── status_publisher.py
-│ │ ├── status_subscriber.py
-│ │ ├── deliver_action_server.py
-│ │ └── deliver_action_client.py
-│ ├── setup.py
-│ └── package.xml
+│   │
+│   ├── warehouse_interfaces/
+│   │   ├── action/
+│   │   │   └── Deliver.action
+│   │   ├── msg/
+│   │   │   └── DeliveryStatus.msg
+│   │   ├── srv/
+│   │   │   └── LoadPackage.srv
+│   │   ├── CMakeLists.txt
+│   │   └── package.xml
+│   │
+│   └── warehouse_nodes/
+│       ├── warehouse_nodes/
+│       │   ├── __init__.py
+│       │   ├── warehouse_node.py
+│       │   ├── status_publisher.py
+│       │   ├── status_subscriber.py
+│       │   ├── deliver_action_server.py
+│       │   └── deliver_action_client.py
+│       │
+│       ├── resource/
+│       │   └── warehouse_nodes
+│       ├── test/
+│       ├── package.xml
+│       ├── setup.cfg
+│       └── setup.py
 │
 ├── .gitignore
 └── README.md
